@@ -1,5 +1,7 @@
-package at.refugeescode.diagnose;
+package at.refugeescode.diagnose.endpoint;
 
+import at.refugeescode.diagnose.model.Patients;
+import at.refugeescode.diagnose.servece.PatientsInfo;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

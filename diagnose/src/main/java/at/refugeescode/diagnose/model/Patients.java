@@ -1,4 +1,4 @@
-package at.refugeescode.diagnose;
+package at.refugeescode.diagnose.model;
 
 import java.util.List;
 

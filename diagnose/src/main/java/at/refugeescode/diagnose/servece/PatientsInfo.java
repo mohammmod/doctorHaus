@@ -1,5 +1,6 @@
-package at.refugeescode.diagnose;
+package at.refugeescode.diagnose.servece;
 
+import at.refugeescode.diagnose.model.Patients;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
