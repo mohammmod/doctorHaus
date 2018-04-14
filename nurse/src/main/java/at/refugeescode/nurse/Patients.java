@@ -1,13 +1,18 @@
-package at.refugeescode.diagnose.model;
+package at.refugeescode.nurse;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
-import java.util.Set;
 
+@Document
 public class Patients {
+    @Id
     private String id;
     private String name;
-    private Set<String> symptoms;
+    private List<String> symptoms;
     private String illness;
+    private String treatment;
 
     public String getId() {
         return id;
@@ -26,11 +31,11 @@ public class Patients {
     }
 
 
-    public Set<String> getSymptoms() {
+    public List<String> getSymptoms() {
         return symptoms;
     }
 
-    public void setSymptoms(Set<String> symptoms) {
+    public void setSymptoms(List<String> symptoms) {
         this.symptoms = symptoms;
     }
 
@@ -40,5 +45,13 @@ public class Patients {
 
     public void setIllness(String illness) {
         this.illness = illness;
+    }
+
+    public String getTreatment() {
+        return treatment;
+    }
+
+    public void setTreatment(String treatment) {
+        this.treatment = treatment;
     }
 }

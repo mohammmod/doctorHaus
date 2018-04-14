@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -21,13 +22,13 @@ public class PatientsInfo {
         patients.add(patient);
     }
 
-    public String getObsorving(List<String> symptoms) {
+    public String getObsorving(Set<String> symptoms) {
         HashMap<String, String> hashMap = new HashMap<>();
-        hashMap.put("hot", "a cold");
-        hashMap.put("more hot", "viber");
-        hashMap.containsValue("hot");
+        hashMap.put("hot", "cold");
+        hashMap.put("cough", "viber");
 
         String illness = symptoms.stream()
+                //.map(onesymptoms ->onesymptoms.split(" "))
                 .map(onesymptoms -> hashMap.get(onesymptoms))
                 .filter(e -> e != null)
                 .collect(Collectors.joining(" "));
