@@ -5,6 +5,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.time.LocalDate;
+
 @RestController
 @RequestMapping("/patients")
 public class Endpoint {
@@ -21,8 +25,10 @@ public class Endpoint {
         String treatment = patients.getTreatment();
         String invoice = invoices.getInvoice(treatment);
         System.out.println(treatment);
-       // patients.setInvoice(invoice);
-       // repository.save(patients);
+        patients.setInvoice(invoice);
+        patients.setTimePayment(LocalDate.now());
+        repository.save(patients);
+        System.out.println(patients.getTimePayment());
         return patients;
     }
 }

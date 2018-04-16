@@ -1,22 +1,26 @@
 package at.refugeescode.accountancy;
 
-import jdk.jfr.Enabled;
-import org.springframework.data.annotation.Id;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
+import org.springframework.stereotype.Component;
+
+import javax.persistence.*;
+import java.time.Duration;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
 public class Patients {
+
     @Id
     @GeneratedValue
     private Long id;
     private String name;
+    @ElementCollection(fetch = FetchType.EAGER)
     private List<String> symptoms;
     private String illness;
     private String treatment;
     private String invoice;
+    private LocalDate timePayment;
 
     public Patients(){
     }
@@ -68,5 +72,13 @@ public class Patients {
 
     public void setInvoice(String invoice) {
         this.invoice = invoice;
+    }
+
+    public LocalDate getTimePayment() {
+        return timePayment;
+    }
+
+    public void setTimePayment(LocalDate timePayment) {
+        this.timePayment = timePayment;
     }
 }
