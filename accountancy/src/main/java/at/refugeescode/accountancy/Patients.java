@@ -14,6 +14,7 @@ public class Patients {
     @Id
     @GeneratedValue
     private Long id;
+    private String userId;
     private String name;
     @ElementCollection(fetch = FetchType.EAGER)
     private List<String> symptoms;
@@ -80,5 +81,13 @@ public class Patients {
 
     public void setTimePayment(LocalDate timePayment) {
         this.timePayment = timePayment;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }

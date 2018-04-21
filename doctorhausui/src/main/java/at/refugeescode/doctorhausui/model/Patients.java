@@ -1,9 +1,8 @@
-package at.refugeescode.Admission.model;
+package at.refugeescode.doctorhausui.model;
 
 import java.util.List;
 
 public class Patients {
-    //private String id;
     private String userId;
     private String name;
     private List<String> symptoms;
@@ -15,6 +14,7 @@ public class Patients {
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
     public String getName() {
         return name;
     }

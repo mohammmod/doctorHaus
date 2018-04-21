@@ -28,8 +28,7 @@ public class Admission {
         patientsInfo.addPatient(patient);
         ResponseEntity<Patients> patientsResponseEntity = restTemplate.postForEntity(diagnosisUrl
                 , patient, Patients.class);
-        System.out.println(patientsResponseEntity.getBody().getName()
-        + patientsResponseEntity.getBody().getSymptoms());
+        System.out.println(patient.getSymptoms() + patient.getName());
 
         return patient;
 

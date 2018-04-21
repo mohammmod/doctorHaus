@@ -4,18 +4,12 @@ import java.util.List;
 import java.util.Set;
 
 public class Patients {
-    private String id;
+   // private String id;
+    private String userId;
     private String name;
     private Set<String> symptoms;
     private String illness;
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -40,5 +34,13 @@ public class Patients {
 
     public void setIllness(String illness) {
         this.illness = illness;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }

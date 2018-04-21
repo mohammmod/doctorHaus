@@ -23,10 +23,11 @@ public class EndPoint {
     @PostMapping
     Patients giveTreatment(@RequestBody Patients patients){
         String illness = patients.getIllness();
-        System.out.println(illness);
+        //cleaning
         String nurseTreatment = treatment.getTreatment(illness);
         patients.setTreatment(nurseTreatment);
         repository.save(patients);
+        //cleaning
         restTemplate.postForEntity(accountancyurl,patients,Patients.class);
         return patients;
     }

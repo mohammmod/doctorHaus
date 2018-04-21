@@ -26,7 +26,7 @@ public class Endpoint {
         Set<String> symptoms = patients.getSymptoms();
         String obsorving = patientsInfo.getObsorving(symptoms);
         patients.setIllness(obsorving);
-        patientsInfo.addPatient(patients);
+       // patientsInfo.addPatient(patients);
         ResponseEntity<Patients> patientsSends = restTemplate.postForEntity(nurseUrl,
                 patients, Patients.class);
 

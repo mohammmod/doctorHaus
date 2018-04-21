@@ -9,6 +9,7 @@ import java.util.List;
 public class Patients {
     @Id
     private String id;
+    private String userId;
     private String name;
     private List<String> symptoms;
     private String illness;
@@ -53,5 +54,13 @@ public class Patients {
 
     public void setTreatment(String treatment) {
         this.treatment = treatment;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }
