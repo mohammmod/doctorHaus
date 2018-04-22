@@ -8,7 +8,9 @@
 </head>
 <body>
 <h3 th:if="${#lists.isEmpty(patientsInvoices)}"></h3>
-<center><table th:if="${not #lists.isEmpty(patientsInvoices)}" class="centered"  >
+<center>
+    <h1 class="container" ><a href="/">DR.HOUSE</a></h1>
+    <table th:if="${not #lists.isEmpty(patientsInvoices)}" class="centered"  >
 
     <thead >
     <tr>
