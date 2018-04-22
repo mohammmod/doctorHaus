@@ -1,5 +1,8 @@
-package at.refugeescode.nurse;
+package at.refugeescode.nurse.controller;
 
+import at.refugeescode.nurse.model.Patients;
+import at.refugeescode.nurse.model.Repository;
+import at.refugeescode.nurse.service.Treatment;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;

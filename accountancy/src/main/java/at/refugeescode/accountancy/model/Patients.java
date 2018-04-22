@@ -1,4 +1,4 @@
-package at.refugeescode.accountancy;
+package at.refugeescode.accountancy.model;
 
 import javax.persistence.*;
 import java.time.LocalDate;

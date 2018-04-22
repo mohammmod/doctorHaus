@@ -5,3 +5,5 @@ this project is basically a small hospital administration where by you could rec
 <li>speing_boot 2.0.1
 <li>mongodb
 <li>mysql
+<li>Thymeleaf
+<li>materialize

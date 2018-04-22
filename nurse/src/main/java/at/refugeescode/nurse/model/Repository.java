@@ -1,5 +1,6 @@
-package at.refugeescode.nurse;
+package at.refugeescode.nurse.model;
 
+import at.refugeescode.nurse.model.Patients;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package at.refugeescode.nurse;
+package at.refugeescode.nurse.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

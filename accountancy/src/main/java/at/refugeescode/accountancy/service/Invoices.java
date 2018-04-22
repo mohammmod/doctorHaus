@@ -1,19 +1,17 @@
-package at.refugeescode.nurse;
+package at.refugeescode.accountancy.service;
 
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class Treatment {
-
-    public String getTreatment(String illness) {
+public class Invoices {
+    public String getInvoice(String illness) {
         HashMap<String, String> hashMap = new HashMap<>();
-        hashMap.put("cold", "drinkWater");
-        hashMap.put("viber", "drinktea");
+        hashMap.put("drinkWater","$10");
+        hashMap.put("drinktea","$20");
         //String treatment = hashMap.get(illness);
         String[] illnesses = illness.split(" ");
         String treatment = Arrays.stream(illnesses)

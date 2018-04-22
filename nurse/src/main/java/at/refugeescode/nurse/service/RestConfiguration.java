@@ -1,4 +1,4 @@
-package at.refugeescode.nurse;
+package at.refugeescode.nurse.service;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
