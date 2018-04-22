@@ -28,7 +28,6 @@ public class Endpoint{
     }
     @GetMapping("/invoices")
     String showInvoices(){
-        //sender.getPatientsInvoices();
         return "invoices";
     }
     @PostMapping
@@ -40,6 +39,12 @@ public class Endpoint{
     @ModelAttribute("patients")
     public Patients patients(){
         return new Patients();
+    }
+
+
+    @ModelAttribute("patientsInvoices")
+    public List<FinalResult> patientsInvoices(){
+        return sender.getPatientsInvoices();
     }
 
 

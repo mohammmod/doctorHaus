@@ -1,31 +1,27 @@
 package at.refugeescode.doctorhausui.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
+
 
 public class FinalResult {
     private Long id;
+    private String mongoid;
     private String userId;
     private String name;
     private List<String> symptoms;
     private String illness;
     private String treatment;
-    private Double bill;
+    private String invoice;
+    private LocalDate timePayment;
 
-    public Long getId() {
-        return id;
+
+    public String getId() {
+        return mongoid;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getUuidInMongoDB() {
-        return userId;
-    }
-
-    public void setUuidInMongoDB(String userId) {
-        this.userId = userId;
+    public void setId(String id) {
+        this.mongoid = id;
     }
 
     public String getName() {
@@ -35,6 +31,7 @@ public class FinalResult {
     public void setName(String name) {
         this.name = name;
     }
+
 
     public List<String> getSymptoms() {
         return symptoms;
@@ -60,22 +57,27 @@ public class FinalResult {
         this.treatment = treatment;
     }
 
-    public Double getBill() {
-        return bill;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setBill(Double bill) {
-        this.bill = bill;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    public LocalDateTime getLocalDateTime() {
-        return localDateTime;
+    public String getInvoice() {
+        return invoice;
     }
 
-    public void setLocalDateTime(LocalDateTime localDateTime) {
-        this.localDateTime = localDateTime;
+    public void setInvoice(String invoice) {
+        this.invoice = invoice;
     }
 
-    private LocalDateTime localDateTime;
+    public LocalDate getTimePayment() {
+        return timePayment;
+    }
 
+    public void setTimePayment(LocalDate timePayment) {
+        this.timePayment = timePayment;
+    }
 }

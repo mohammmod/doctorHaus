@@ -1,10 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" />
     <title>Invoices</title>
 </head>
 <body>
+<h3 th:if="${#lists.isEmpty(patientsInvoices)}"></h3>
+<center><table th:if="${not #lists.isEmpty(patientsInvoices)}" class="centered"  >
 
+    <thead >
+    <tr>
+        <th>user id</th>
+        <th>names</th>
+        <th>treatment</th>
+        <th>invoice</th>
+        <th>Bill time</th>
+    </tr>
+    </thead>
+
+    <tbody th:remove="all-but-first">
+
+    <tr th:each="patientsInvoice : ${patientsInvoices}">
+
+        <td th:text="${patientsInvoice.userId}"></td>
+        <td th:text="${patientsInvoice.name}"></td>
+        <td th:text="${patientsInvoice.treatment}"></td>
+        <td th:text="${patientsInvoice.invoice}"></td>
+        <td th:text="${patientsInvoice.timePayment}"></td>
+    </tr>
+    </tbody>
+</table>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 </body>
 </html>
