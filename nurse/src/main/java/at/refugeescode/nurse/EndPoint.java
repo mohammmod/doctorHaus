@@ -26,7 +26,10 @@ public class EndPoint {
         //cleaning
         String nurseTreatment = treatment.getTreatment(illness);
         patients.setTreatment(nurseTreatment);
+        System.out.println(patients);
+        System.out.println("this is testing" + nurseTreatment);
         repository.save(patients);
+
         //cleaning
         restTemplate.postForEntity(accountancyurl,patients,Patients.class);
         return patients;

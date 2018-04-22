@@ -1,19 +1,19 @@
 package at.refugeescode.accountancy;
 
 
-import org.springframework.stereotype.Component;
+
+import org.hibernate.annotations.Fetch;
 
 import javax.persistence.*;
-import java.time.Duration;
 import java.time.LocalDate;
 import java.util.List;
 
 @Entity
 public class Patients {
-
     @Id
     @GeneratedValue
     private Long id;
+    private String mongoid;
     private String userId;
     private String name;
     @ElementCollection(fetch = FetchType.EAGER)
@@ -23,15 +23,15 @@ public class Patients {
     private String invoice;
     private LocalDate timePayment;
 
-    public Patients(){
+    public Patients() {
     }
 
-    public Long getId() {
-        return id;
+    public String getId() {
+        return mongoid;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(String id) {
+        this.mongoid = id;
     }
 
     public String getName() {
@@ -67,6 +67,14 @@ public class Patients {
         this.treatment = treatment;
     }
 
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
     public String getInvoice() {
         return invoice;
     }
@@ -81,13 +89,5 @@ public class Patients {
 
     public void setTimePayment(LocalDate timePayment) {
         this.timePayment = timePayment;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
     }
 }

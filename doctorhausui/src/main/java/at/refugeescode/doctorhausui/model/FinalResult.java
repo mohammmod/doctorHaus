@@ -1,26 +1,31 @@
-package at.refugeescode.nurse;
+package at.refugeescode.doctorhausui.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
+import java.time.LocalDateTime;
 import java.util.List;
 
-@Document
-public class Patients {
-    @Id
-    private String mongoid;
+public class FinalResult {
+    private Long id;
     private String userId;
     private String name;
     private List<String> symptoms;
     private String illness;
     private String treatment;
+    private Double bill;
 
-    public String getId() {
-        return mongoid;
+    public Long getId() {
+        return id;
     }
 
-    public void setId(String id) {
-        this.mongoid = id;
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getUuidInMongoDB() {
+        return userId;
+    }
+
+    public void setUuidInMongoDB(String userId) {
+        this.userId = userId;
     }
 
     public String getName() {
@@ -30,7 +35,6 @@ public class Patients {
     public void setName(String name) {
         this.name = name;
     }
-
 
     public List<String> getSymptoms() {
         return symptoms;
@@ -56,11 +60,22 @@ public class Patients {
         this.treatment = treatment;
     }
 
-    public String getUserId() {
-        return userId;
+    public Double getBill() {
+        return bill;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setBill(Double bill) {
+        this.bill = bill;
     }
+
+    public LocalDateTime getLocalDateTime() {
+        return localDateTime;
+    }
+
+    public void setLocalDateTime(LocalDateTime localDateTime) {
+        this.localDateTime = localDateTime;
+    }
+
+    private LocalDateTime localDateTime;
+
 }

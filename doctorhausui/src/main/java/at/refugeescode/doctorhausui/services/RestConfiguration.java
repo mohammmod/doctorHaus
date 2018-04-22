@@ -1,4 +1,4 @@
-package at.refugeescode.doctorhausui;
+package at.refugeescode.doctorhausui.services;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
