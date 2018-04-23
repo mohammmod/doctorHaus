@@ -3,6 +3,7 @@ package at.refugeescode.doctorhausui.security;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.User;
@@ -39,9 +40,10 @@ public class securityconfig extends WebSecurityConfigurerAdapter{
     }
 
     @Bean
-    public UserDetailsService userDetailsService(PasswordEncoder encoder) {
+    public UserDetailsService userDetailsService(PasswordEncoder encoder, Environment environment) {
+        String password = environment.getProperty("spring.security.user.password");
         List<UserDetails> users = Stream.of(
-                User.withUsername("user").password(encoder.encode("user")).roles("USER").build()
+                User.withUsername("accountancyWorker").password(encoder.encode(password)).roles("USER").build()
 
         ).collect(Collectors.toList());
         return new InMemoryUserDetailsManager(users);

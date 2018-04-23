@@ -2,23 +2,39 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Login</title>
-    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <meta charset="UTF-8"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" />
+
 </head>
-<body>
-<div class="container">
-    <div class="content">
+<body class="container">
+
+
+        <h1 ><a href="/">DR.HOUSE</a></h1>
         <p th:if="${param.logout}" class="alert">You have been logged out</p>
         <p th:if="${param.error}" class="alert alert-error">There was an error, please try again</p>
+
         <h2>Login with Username and Password</h2>
         <form name="form" th:action="@{/login}" action="/login" method="POST">
-            <fieldset>
-                <input type="text" name="username" value="" placeholder="Username" autofocus="autofocus" />
-                <input type="password" name="password" placeholder="Password" />
-            </fieldset>
-            <input type="submit" id="login" value="Login"
-                   class="btn btn-primary" />
+
+            <form class="col s12">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input type="text" class="validate" name="username" value="" autofocus="autofocus">
+                    <label class="active">user name</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input type="password"  class="validate"  name="password">
+                    <label class="active">password</label>
+                </div>
+                <input type="submit" id="login" value="Login" class="btn btn-primary"/>
+            </form>
         </form>
-    </div>
-</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 </body>
 </html>
