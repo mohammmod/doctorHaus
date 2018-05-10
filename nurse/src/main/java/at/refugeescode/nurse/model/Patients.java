@@ -9,7 +9,6 @@ import java.util.List;
 public class Patients {
     @Id
     private String mongoid;
-    private String userId;
     private String name;
     private List<String> symptoms;
     private String illness;
@@ -56,11 +55,4 @@ public class Patients {
         this.treatment = treatment;
     }
 
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
 }

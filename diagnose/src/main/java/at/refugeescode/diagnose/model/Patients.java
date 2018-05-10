@@ -4,8 +4,6 @@ import java.util.List;
 import java.util.Set;
 
 public class Patients {
-   // private String id;
-    private String userId;
     private String name;
     private Set<String> symptoms;
     private String illness;
@@ -36,11 +34,4 @@ public class Patients {
         this.illness = illness;
     }
 
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
 }

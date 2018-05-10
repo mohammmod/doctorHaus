@@ -3,18 +3,9 @@ package at.refugeescode.Admission.model;
 import java.util.List;
 
 public class Patients {
-    //private String id;
-    private String userId;
     private String name;
     private List<String> symptoms;
 
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
     public String getName() {
         return name;
     }

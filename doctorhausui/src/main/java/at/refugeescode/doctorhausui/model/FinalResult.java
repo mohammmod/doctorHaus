@@ -7,7 +7,6 @@ import java.util.List;
 public class FinalResult {
     private Long id;
     private String mongoid;
-    private String userId;
     private String name;
     private List<String> symptoms;
     private String illness;
@@ -55,14 +54,6 @@ public class FinalResult {
 
     public void setTreatment(String treatment) {
         this.treatment = treatment;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
     }
 
     public String getInvoice() {

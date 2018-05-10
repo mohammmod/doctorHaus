@@ -10,3 +10,4 @@ public class AccountancyApplication {
 		SpringApplication.run(AccountancyApplication.class, args);
 	}
 }
+

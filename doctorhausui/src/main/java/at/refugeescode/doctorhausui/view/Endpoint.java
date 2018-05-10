@@ -42,13 +42,17 @@ public class Endpoint{
     }
 
 
-    @ModelAttribute("patientsInvoices")
+    @ModelAttribute("patientsInvoice")
     public List<FinalResult> patientsInvoices(){
         return sender.getPatientsInvoices();
     }
     @GetMapping
     String show(){
-        return "layout";
+        return "home";
+    }
+    @GetMapping("/homes")
+    String showing(){
+        return "home1";
     }
 
 
