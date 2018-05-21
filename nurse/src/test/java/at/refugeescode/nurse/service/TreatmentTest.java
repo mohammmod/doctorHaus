@@ -7,7 +7,7 @@ class TreatmentTest {
     Treatment treatment = new Treatment();
     @Test
     void getTreatment() {
-        String treats = treatment.getTreatment("cold");
-        assertEquals("drinkWater", treats);
+        String treat = treatment.getTreatment("cold");
+        assertEquals("drinkWater", treat);
     }
 }
