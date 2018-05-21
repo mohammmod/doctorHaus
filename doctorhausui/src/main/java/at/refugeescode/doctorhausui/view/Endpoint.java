@@ -44,7 +44,7 @@ public class Endpoint{
 
     @ModelAttribute("patientsInvoice")
     public List<FinalResult> patientsInvoices(){
-        return sender.getPatientsInvoices();
+        return null; //sender.getPatientsInvoices();
     }
     @GetMapping
     String show(){
