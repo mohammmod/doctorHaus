@@ -26,7 +26,7 @@ public class Sender {
     public void addPatient(Patients patients){
         restTemplate.postForObject(admissionurl,patients,Patients.class);
     }
-   /* public List<FinalResult> getPatientsInvoices(){
+    public List<FinalResult> getPatientsInvoices(){
         return Arrays.asList(restTemplate.getForObject(accountancyUrl,FinalResult[].class));
-    }*/
+    }
 }
