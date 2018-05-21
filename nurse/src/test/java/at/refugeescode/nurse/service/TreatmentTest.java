@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TreatmentTest {
-    Treatment treatment = new Treatment();
+    Treatment treat = new Treatment();
     @Test
     void getTreatment() {
-        String treat = treatment.getTreatment("cold");
-        assertEquals("drinkWater", treat);
+        String trea = treat.getTreatment("cold");
+        assertEquals("drinkWater", trea);
     }
 }
