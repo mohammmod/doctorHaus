@@ -17,6 +17,7 @@ public class PatientsInfoTest {
         symptoms.add("hot");
         String obsorving = patientsInfo.getObsorving(symptoms);
         assertEquals("cold",obsorving);
-
     }
+    @Test
+    public void
 }

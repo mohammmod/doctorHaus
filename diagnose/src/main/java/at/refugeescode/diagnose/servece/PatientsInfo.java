@@ -12,15 +12,7 @@ import java.util.stream.Collectors;
 @Service
 public class PatientsInfo {
     //test delete
-    private List<Patients> patients = new ArrayList<>();
-
-    public List<Patients> getAllPatients() {
-        return patients;
-    }
-
-    public void addPatient(Patients patient) {
-        patients.add(patient);
-    }
+    
 
     public String getObsorving(Set<String> symptoms) {
         HashMap<String, String> hashMap = new HashMap<>();

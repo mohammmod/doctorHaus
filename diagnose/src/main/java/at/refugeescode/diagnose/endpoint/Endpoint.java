@@ -34,8 +34,5 @@ public class Endpoint {
 
         return patients;
     }
-    @GetMapping
-    List<Patients> getAllPatientes(){
-        return patientsInfo.getAllPatients();
-    }
+
 }
