@@ -11,9 +11,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class PatientsInfo {
-    //test delete
     
-
     public String getObsorving(Set<String> symptoms) {
         HashMap<String, String> hashMap = new HashMap<>();
         hashMap.put("hot", "cold");
