@@ -11,7 +11,6 @@ public class DiagnoseApplicationTests {
 
 	@Test
 	public void contextLoads() {
-j
 	}
 
 }
